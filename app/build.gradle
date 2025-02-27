@@ -1,14 +1,14 @@
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
 
 android {
-
-    compileSdkVersion 26
-    buildToolsVersion "26.0.2"
+    namespace "com.naman14.tandroidlame"
+    compileSdk 35
 
     defaultConfig {
         applicationId "com.naman14.tandroidlame"
-        minSdkVersion 16
-        targetSdkVersion 26
+        minSdk 21
+        targetSdk 35
         versionCode 1
         versionName "1.0"
     }
@@ -29,9 +29,9 @@ android {
 
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile 'com.android.support:appcompat-v7:26.1.0'
-    compile 'com.android.support:recyclerview-v7:26.1.0'
-    compile project(':androidlame')
-
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'androidx.appcompat:appcompat:1.7.0'
+    implementation 'androidx.recyclerview:recyclerview:1.4.0'
+    implementation 'androidx.fragment:fragment-ktx:1.8.6'
+    implementation project(':androidlame')
 }

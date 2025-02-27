@@ -4,7 +4,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:paddingLeft="15dp"
-    android:paddingTop="15dp">
+    android:paddingTop="15dp"
+    android:fitsSystemWindows="true">
 
     <Button
         android:id="@+id/record"
