@@ -1,13 +1,16 @@
-apply plugin: 'com.android.library'
-apply plugin: 'com.github.dcendents.android-maven'
+plugins {
+    id 'com.android.library'
+    id 'maven-publish'
+    id 'signing'
+}
 
 android {
-    compileSdkVersion 26
-    buildToolsVersion "26.0.2"
+    namespace "com.naman14.tandroidlame"
+    compileSdk 35
 
     defaultConfig {
-        minSdkVersion 16
-        targetSdkVersion 26
+        minSdk 21
+        targetSdk 35
         versionCode 1
         versionName "1.0"
     }
@@ -19,6 +22,7 @@ android {
         }
     }
 
+    ndkVersion "27.0.12077973"
     externalNativeBuild {
         ndkBuild {
             path 'src/main/jni/Android.mk'
@@ -27,8 +31,6 @@ android {
 }
 
 
-
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile 'com.android.support:appcompat-v7:26.1.0'
+    compileOnly fileTree(include: ['*.jar'], dir: 'libs')
 }

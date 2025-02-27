@@ -29,3 +29,4 @@ LOCAL_PATH := $(call my-dir)
     LOCAL_CFLAGS = -DSTDC_HEADERS
 
     include $(BUILD_SHARED_LIBRARY)
+    APP_SUPPORT_FLEXIBLE_PAGE_SIZES := true
